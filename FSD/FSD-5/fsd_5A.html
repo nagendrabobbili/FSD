@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Color Reference Methods</title>
+  <style>
+    :root {
+      --custom-blue: #0077cc;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .color-name {
+      color: red; /* Using color name */
+    }
+    .hex {
+      color: #00ff00; /* Using hex code */
+    }
+    .rgb {
+      color: rgb(0, 0, 255); /* Using RGB */
+    }
+    .rgba {
+      color: rgba(255, 0, 0, 0.5); /* Using RGBA with transparency */
+    }
+    .hsl {
+      color: hsl(120, 100%, 25%); /* Using HSL */
+    }
+    .hsla {
+      color: hsla(240, 100%, 50%, 0.6); /* Using HSLA */
+    }
+    .variable {
+      color: var(--custom-blue); /* Using CSS variable */
+    }
+  </style>
+</head>
+<body>
+  <h2>CSS Color Reference Methods</h2>
+  <p class="color-name">This text uses a color name: red</p>
+  <p class="hex">This text uses a hex value: #00ff00</p>
+  <p class="rgb">This text uses RGB: rgb(0, 0, 255)</p>
+  <p class="rgba">This text uses RGBA: rgba(255, 0, 0, 0.5)</p>
+  <p class="hsl">This text uses HSL: hsl(120, 100%, 25%)</p>
+  <p class="hsla">This text uses HSLA: hsla(240, 100%, 50%, 0.6)</p>
+  <p class="variable">This text uses a CSS variable: --custom-blue</p>
+</body>
+</html>

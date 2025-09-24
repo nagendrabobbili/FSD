@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Map with Two Friends</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    img {
+      border: 2px solid #333;
+      max-width: 600px;
+      height: auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click on a Person to Visit Their Profile</h1>
+
+  <!-- Single image containing two friends -->
+  <img 
+    src="https://t3.ftcdn.net/jpg/05/25/72/36/360_F_525723605_jTdKeSiKEEQ5Eeb81G4B5AUjd9eGTxek.jpg" 
+    alt="Two friends" 
+    usemap="#friends-map" 
+    width="600" 
+    height="400"
+  />
+
+  <map name="friends-map">
+    <!-- Coordinates need to be adjusted to the actual positions of the friends in the image -->
+    <!-- First friend (left person) -->
+    <area shape="rect" coords="50,50,270,350" href="https://images.pexels.com/photos/670720/pexels-photo-670720.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Friend 1 Profile" />
+    <!-- Second friend (right person) -->
+    <area shape="rect" coords="320,50,550,350" href="https://static.vecteezy.com/system/resources/thumbnails/057/586/960/small_2x/silhouette-of-young-caucasian-male-against-black-background-photo.jpeg" alt="Friend 2 Profile" />
+  </map>
+
+</body>
+</html>

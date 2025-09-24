@@ -1,0 +1,11 @@
+/* Selector: h1 | Property: color | Value: blue */
+h1 {
+    color: blue;
+  }
+  
+  /* Selector: p.external | Property: font-size | Value: 16px */
+  p.external {
+    font-size: 16px;
+    font-style: italic;
+  }
+  

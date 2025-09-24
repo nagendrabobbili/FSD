@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Selector Forms</title>
+<style>
+h1 { color: blue; }
+#special { color: red; font-weight: bold; }
+.highlight { background-color: yellow; }
+p, li { font-family: Arial, sans-serif; }
+* { box-sizing: border-box; }
+section p { color: green; }
+ul > li { list-style-type: square; }
+h2 + p { font-style: italic; }
+h3 ~ p { text-decoration: underline; }
+a:hover { color: orange; }
+ul li:first-child { color: purple; }
+h2::before { content: "★ "; color: gold; }
+h2::after { content: " ★"; color: gold; }
+input[type="text"] { border: 2px solid blue; padding: 5px; }
+a[href*="example"] { font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Simple Selectors</h1>
+<p class="highlight">Paragraph with class selector.</p>
+<p id="special">Paragraph with ID selector.</p>
+<p>Normal paragraph (element selector).</p>
+<h1>Group and Universal Selector</h1>
+<p>Paragraph affected by group selector.</p>
+<ul>
+  <li>List item 1</li>
+  <li>List item 2</li>
+</ul>
+<h1>Combinator Selectors</h1>
+<section>
+  <p>Paragraph descendant of section.</p>
+</section>
+<ul>
+  <li>Direct child list item 1</li>
+  <li>Direct child list item 2</li>
+</ul>
+<h2>Heading 2</h2>
+<p>Adjacent sibling to H2.</p>
+<h3>Heading 3</h3>
+<p>General sibling to H3.</p>
+<h1>Pseudo-class Selectors</h1>
+<a href="#">Hover over me!</a>
+<ul>
+  <li>First child styled</li>
+  <li>Second child</li>
+</ul>
+<h1>Pseudo-element Selectors</h1>
+<h2>Pseudo-element Example</h2>
+<h1>Attribute Selectors</h1>
+<input type="text" placeholder="Type here">
+<br><br>
+<a href="https://www.example.com">Link containing example</a>
+</body>
+</html>

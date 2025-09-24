@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form>
+    <table border="1" cellpadding="5" cellspacing="0">
+      <tr><td>Name:</td><td><input type="text" name="name"></td></tr>
+      <tr><td>Username:</td><td><input type="text" name="uname"></td></tr>
+      <tr><td>Password:</td><td><input type="password" name="pwd"></td></tr>
+      <tr><td>Age:</td><td><input type="number" name="age"></td></tr>
+      <tr><td>DOB:</td><td><input type="date" name="dob"></td></tr>
+      <tr><td>Gender:</td>
+        <td>
+          <input type="radio" name="gender" value="M">Male
+          <input type="radio" name="gender" value="F">Female
+        </td>
+      </tr>
+      <tr><td>Hobbies:</td>
+        <td>
+          <input type="checkbox" name="h1">Reading
+          <input type="checkbox" name="h2">Sports
+          <input type="checkbox" name="h3">Music
+        </td>
+      </tr>
+      <tr><td>Department:</td>
+        <td>
+          <select name="dept">
+            <option>CSE</option><option>IT</option>
+            <option>ECE</option><option>EEE</option>
+          </select>
+        </td>
+      </tr>
+      <tr><td>Address:</td><td><textarea name="addr" rows="3"></textarea></td></tr>
+      <tr><td colspan="2" align="center">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </td></tr>
+    </table>
+  </form>
+</body>
+</html>

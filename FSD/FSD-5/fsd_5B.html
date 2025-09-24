@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Background Image Tilt</title>
+<style>
+  body {
+    margin: 0;
+    height: 200vh; /* Make page scrollable */
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 50%;          /* halfway down the viewport */
+    left: 50%;         /* center horizontally */
+    width: 300px;      /* set size */
+    height: 300px;
+    background-image: url('https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE='); /* your image URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%) rotateX(20deg); /* tilt horizontally */
+    pointer-events: none;  /* ignore mouse */
+    z-index: -1;           /* behind content */
+  }
+</style>
+</head>
+<body>
+  <h1>Scroll the page and see the image fixed halfway down, tilted!</h1>
+  <p>
+   Ojas Gambheera (“OG”) is a gangster who disappeared for about ten years. The crime‑world in Mumbai has changed in his absence. He returns with a vengeance, with an aim to confront or kill another crime boss, Omi Bhau. It’s a power struggle, vengeance, betrayal, and a fight for dominance in the underworld. 
+Wikipedia
++2
+filmimasti.com
++2
+
+There are also emotional stakes: family history, loss, perhaps redemption or identity issues. The film promises not just action but emotion. 
+The Times of India
++2
+pawankalyan.org
++2
+
+🔥 What’s Unique & What’s Generating Buzz
+
+The title “OG” comes from the character’s name Ojas Gambheera and also reflects “Original Gangster.” It suggests both his identity and his reputation in the gangster world. 
+Sakshi Post
++1
+
+The promotions, teasers, glimpses (for example one called “Hungry Cheetah”) have been very stylish, building a lot of hype. Visuals, music, character reveals (tattoos, styling) are being used to set tone. 
+India Today
++2
+The Times of India
++2
+
+It got an A certificate from the Indian censor board, because of high violence & strong language. Some content had to be muted. So this is intended for mature audiences. 
+The Times of India
++1
+  </p>
+</body>
+</html>

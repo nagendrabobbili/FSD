@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thumbnail Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .gallery a img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: border-color 0.3s;
+    }
+    .gallery a img:hover {
+      border-color: #007BFF;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Thumbnail Image Gallery</h1>
+
+  <div class="gallery">
+    <a href="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" target="_blank" rel="noopener">
+      <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?crop=entropy&cs=tinysrgb&fit=crop&h=100&w=100" alt="Mountain View" />
+    </a>
+
+    <a href="https://images.unsplash.com/photo-1494526585095-c41746248156" target="_blank" rel="noopener">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?crop=entropy&cs=tinysrgb&fit=crop&h=100&w=100" alt="Beach Sunset" />
+    </a>
+
+    <a href="https://images.unsplash.com/photo-1518837695005-2083093ee35b" target="_blank" rel="noopener">
+      <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?crop=entropy&cs=tinysrgb&fit=crop&h=100&w=100" alt="Forest Path" />
+    </a>
+
+    <a href="https://images.unsplash.com/photo-1506744038136-46273834b3fb" target="_blank" rel="noopener">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=crop&h=100&w=100" alt="Desert Dunes" />
+    </a>
+
+    <a href="https://images.unsplash.com/photo-1468071174046-657d9d351a40" target="_blank" rel="noopener">
+      <img src="https://images.unsplash.com/photo-1468071174046-657d9d351a40?crop=entropy&cs=tinysrgb&fit=crop&h=100&w=100" alt="City Skyline" />
+    </a>
+  </div>
+
+</body>
+</html>
