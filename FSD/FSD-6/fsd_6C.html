@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Input Methods</title>
+</head>
+<body>
+<h2>Input Examples</h2>
+<script>
+  let name = prompt("Enter your name:");
+  let isConfirmed = confirm("Do you want to continue?");
+</script>
+<label for="age">Enter your age:</label>
+<input type="number" id="age" />
+<button onclick="displayAge()">Submit Age</button>
+<p id="result"></p>
+<script>
+  function displayAge() {
+    let age = document.getElementById("age").value;
+    document.getElementById("result").innerText = "Your age is: " + age;
+  }
+</script>
+</body>
+</html>

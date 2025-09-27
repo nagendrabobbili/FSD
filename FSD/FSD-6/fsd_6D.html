@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Voter Eligibility</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h2>Voter Eligibility Checker</h2>
+<div id="voterInfo"></div>
+<script>
+  let voterName = prompt("Please enter your name:");
+  let voterAge = prompt("Please enter your age:");
+  voterAge = Number(voterAge);
+  let canVote = voterAge >= 18 ? "Yes" : "No";
+  let tableHTML = `
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Can Vote?</th>
+      </tr>
+      <tr>
+        <td>${voterName}</td>
+        <td>${voterAge}</td>
+        <td>${canVote}</td>
+      </tr>
+    </table>
+  `;
+  document.getElementById("voterInfo").innerHTML = tableHTML;
+</script>
+</body>
+</html>
