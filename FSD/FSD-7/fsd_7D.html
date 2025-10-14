@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Math Object Example</title>
+  <style>pre { background: #eee; padding: 10px; }</style>
+</head>
+<body>
+  <h1>Math Object Properties and Methods</h1>
+  <pre id="output"></pre>
+
+  <script>
+    let output = "";
+
+    output += `Math.PI: ${Math.PI}\n`;
+    output += `Math.sqrt(25): ${Math.sqrt(25)}\n`;
+    output += `Random number between 0 and 1: ${Math.random()}\n`;
+    output += `Random integer between 1 and 10: ${Math.floor(Math.random() * 10) + 1}\n`;
+    output += `Math.abs(-10): ${Math.abs(-10)}\n`;
+    output += `Math.round(4.7): ${Math.round(4.7)}\n`;
+    output += `Math.ceil(4.1): ${Math.ceil(4.1)}\n`;
+    output += `Math.floor(4.9): ${Math.floor(4.9)}\n`;
+
+    document.getElementById("output").textContent = output;
+  </script>
+</body>
+</html>

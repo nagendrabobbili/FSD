@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document Object Example</title>
+</head>
+<body>
+  <h1 id="heading">Hello World!</h1>
+  <button onclick="changeText()">Change Text</button>
+
+  <script>
+    function changeText() {
+      // Access the element using document.getElementById
+      let heading = document.getElementById('heading');
+      
+      // Change the text content of the heading
+      heading.textContent = "Text Changed by Document Object!";
+      
+      // Log the URL of the current document
+      console.log("Current URL: " + document.URL);
+      
+      // Change background color using document.body
+      document.body.style.backgroundColor = "lightblue";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>String Object Example</title>
+  <style>pre { background: #eee; padding: 10px; }</style>
+</head>
+<body>
+  <h1>String Object Properties and Methods</h1>
+  <pre id="output"></pre>
+
+  <script>
+    let str = "Hello, JavaScript!";
+    let output = "";
+
+    output += `Original string: "${str}"\n`;
+    output += `Length: ${str.length}\n`;
+    output += `toUpperCase(): ${str.toUpperCase()}\n`;
+    output += `toLowerCase(): ${str.toLowerCase()}\n`;
+    output += `substring(0,5): ${str.substring(0, 5)}\n`;
+    output += `includes("Java"): ${str.includes("Java")}\n`;
+    output += `replace("JavaScript", "World"): ${str.replace("JavaScript", "World")}\n`;
+
+    document.getElementById("output").textContent = output;
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Regex Object Example</title>
+  <style>pre { background: #eee; padding: 10px; }</style>
+</head>
+<body>
+  <h1>Regex Object Properties and Methods</h1>
+  <pre id="output"></pre>
+
+  <script>
+    let pattern = /hello/i; // case-insensitive "hello"
+    let testStr = "Hello there!";
+    let output = "";
+
+    output += `Pattern: /hello/i\n`;
+    output += `Test string: "${testStr}"\n`;
+    output += `pattern.test(testStr): ${pattern.test(testStr)}\n`;
+
+    let execResult = pattern.exec(testStr);
+    output += `pattern.exec(testStr): ${JSON.stringify(execResult)}\n`;
+
+    let matchResult = testStr.match(pattern);
+    output += `testStr.match(pattern): ${JSON.stringify(matchResult)}\n`;
+
+    document.getElementById("output").textContent = output;
+  </script>
+</body>
+</html>

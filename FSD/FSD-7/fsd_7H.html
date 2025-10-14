@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User-defined Object Example</title>
+  <style>pre { background: #eee; padding: 10px; }</style>
+</head>
+<body>
+  <h1>User-defined Object Example</h1>
+  <pre id="output"></pre>
+
+  <script>
+    function User(firstName, lastName, age) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this._age = age;
+
+      this.getFullName = function() {
+        return this.firstName + " " + this.lastName;
+      };
+
+      Object.defineProperty(this, 'age', {
+        get: function() { return this._age; },
+        set: function(value) {
+          if (value < 0 || value > 120) {
+            console.log("Invalid age!");
+          } else {
+            this._age = value;
+          }
+        }
+      });
+
+      this.display = function() {
+        return `Name: ${this.getFullName()}, Age: ${this.age}`;
+      };
+    }
+
+    let user1 = new User("Alice", "Smith", 28);
+    let output = "";
+
+    output += user1.display() + "\n";
+
+    user1.age = 35;
+    output += "After setting age to 35:\n";
+    output += user1.display() + "\n";
+
+    user1.age = -5; // invalid, will log error but not change age
+    output += "After trying to set invalid age (-5):\n";
+    output += user1.display() + "\n";
+
+    document.getElementById("output").textContent = output;
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Window Object Example</title>
+</head>
+<body>
+  <button onclick="showAlert()">Show Alert</button>
+
+  <script>
+    function showAlert() {
+      // Using window.alert() method
+      window.alert("Hello from Window object!");
+
+      // Using window.location to redirect
+      console.log("Current Location: " + window.location.href);
+
+      // Using window.innerWidth and innerHeight properties
+      console.log("Window size: " + window.innerWidth + "x" + window.innerHeight);
+    }
+  </script>
+</body>
+</html>

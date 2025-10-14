@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Date Object Example</title>
+  <style>pre { background: #eee; padding: 10px; }</style>
+</head>
+<body>
+  <h1>Date Object Properties and Methods</h1>
+  <pre id="output"></pre>
+
+  <script>
+    let today = new Date();
+    let output = "";
+
+    output += `Current date/time: ${today.toString()}\n`;
+    output += `Year: ${today.getFullYear()}\n`;
+    output += `Month (0-11): ${today.getMonth()}\n`;
+    output += `Date: ${today.getDate()}\n`;
+    output += `Day (0-Sun, 6-Sat): ${today.getDay()}\n`;
+    output += `Hours: ${today.getHours()}\n`;
+    output += `Minutes: ${today.getMinutes()}\n`;
+    output += `Seconds: ${today.getSeconds()}\n`;
+
+    today.setFullYear(2020);
+    output += `Changed year: ${today.getFullYear()}\n`;
+
+    document.getElementById("output").textContent = output;
+  </script>
+</body>
+</html>

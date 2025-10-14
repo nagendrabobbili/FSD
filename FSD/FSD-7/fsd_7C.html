@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Array Object Example</title>
+  <style>pre { background: #eee; padding: 10px; }</style>
+</head>
+<body>
+  <h1>Array Object Properties and Methods</h1>
+  <pre id="output"></pre>
+
+  <script>
+    let fruits = ["Apple", "Banana", "Cherry"];
+    let output = "";
+
+    output += `Initial array: ${JSON.stringify(fruits)}\n`;
+    output += `Length: ${fruits.length}\n`;
+
+    fruits.push("Orange");
+    output += `After push("Orange"): ${JSON.stringify(fruits)}\n`;
+
+    let removed = fruits.pop();
+    output += `After pop(): Removed "${removed}", array now: ${JSON.stringify(fruits)}\n`;
+
+    let index = fruits.indexOf("Banana");
+    output += `Index of "Banana": ${index}\n`;
+
+    let hasApple = fruits.includes("Apple");
+    output += `Includes "Apple": ${hasApple}\n`;
+
+    output += "Loop through array with forEach:\n";
+    fruits.forEach((fruit, i) => {
+      output += `  ${i}: ${fruit}\n`;
+    });
+
+    document.getElementById("output").textContent = output;
+  </script>
+</body>
+</html>
