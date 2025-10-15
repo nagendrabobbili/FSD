@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denomination of Amount</title>
+    <script>
+        function getDenominations() {
+            let amount = parseInt(prompt("Enter the amount:"));
+            let denominations = [100, 50, 20, 10, 5, 2, 1];
+            let result = "";
+
+            for (let denom of denominations) {
+                let count = Math.floor(amount / denom);
+                if (count > 0) {
+                    result += count + " x " + denom + "'s, ";
+                    amount -= count * denom;
+                }
+            }
+
+            // Remove the last comma and space
+            result = result.slice(0, -2);
+            alert(result);
+        }
+    </script>
+</head>
+<body>
+    <h2>Denomination of Amount</h2>
+    <button onclick="getDenominations()">Enter Amount</button>
+</body>
+</html>

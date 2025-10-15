@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekday Display</title>
+    <script>
+        function displayWeekday() {
+            let day = parseInt(prompt("Enter a day number (1-7):"));
+
+            switch(day) {
+                case 1:
+                    alert("Monday");
+                    break;
+                case 2:
+                    alert("Tuesday");
+                    break;
+                case 3:
+                    alert("Wednesday");
+                    break;
+                case 4:
+                    alert("Thursday");
+                    break;
+                case 5:
+                    alert("Friday");
+                    break;
+                case 6:
+                    alert("Saturday");
+                    break;
+                case 7:
+                    alert("Sunday");
+                    break;
+                default:
+                    alert("Invalid day number!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Display Weekday</h2>
+    <button onclick="displayWeekday()">Enter Day Number</button>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Number Functions</title>
+<script>
+  // Calculate factorial of n
+  function factorial(n) {
+    if (n < 0) return "Undefined for negative numbers";
+    let fact = 1;
+    for (let i = 2; i <= n; i++) {
+      fact *= i;
+    }
+    return fact;
+  }
+
+  // Generate Fibonacci series up to n
+  function fibonacci(n) {
+    if (n <= 0) return [];
+    let fib = [0];
+    if (n === 1) return fib;
+    fib.push(1);
+    let next = fib[0] + fib[1];
+    while (next <= n) {
+      fib.push(next);
+      next = fib[fib.length - 1] + fib[fib.length - 2];
+    }
+    return fib;
+  }
+
+  // List prime numbers up to n
+  function primesUpTo(n) {
+    if (n < 2) return [];
+    let primes = [];
+    for (let i = 2; i <= n; i++) {
+      let isPrime = true;
+      for (let j = 2; j <= Math.sqrt(i); j++) {
+        if (i % j === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+      if (isPrime) primes.push(i);
+    }
+    return primes;
+  }
+
+  // Check if number is palindrome
+  function isPalindrome(n) {
+    let str = n.toString();
+    return str === str.split("").reverse().join("");
+  }
+
+  // Event handlers to get input and show results
+  function displayFactorial() {
+    let n = parseInt(document.getElementById("numInput").value);
+    if (isNaN(n) || n < 0) {
+      alert("Please enter a valid non-negative integer.");
+      return;
+    }
+    alert(`Factorial of ${n} is ${factorial(n)}`);
+  }
+
+  function displayFibonacci() {
+    let n = parseInt(document.getElementById("numInput").value);
+    if (isNaN(n) || n < 0) {
+      alert("Please enter a valid non-negative integer.");
+      return;
+    }
+    alert(`Fibonacci series up to ${n}: ${fibonacci(n).join(", ")}`);
+  }
+
+  function displayPrimes() {
+    let n = parseInt(document.getElementById("numInput").value);
+    if (isNaN(n) || n < 2) {
+      alert("Please enter an integer greater than or equal to 2.");
+      return;
+    }
+    alert(`Prime numbers up to ${n}: ${primesUpTo(n).join(", ")}`);
+  }
+
+  function displayPalindrome() {
+    let val = document.getElementById("numInput").value.trim();
+    if (val === "" || isNaN(val)) {
+      alert("Please enter a valid number.");
+      return;
+    }
+    alert(`${val} is ${isPalindrome(val) ? "" : "not "}a palindrome.`);
+  }
+</script>
+</head>
+<body>
+  <h2>Number Functions</h2>
+  <label for="numInput">Enter a number:</label>
+  <input type="text" id="numInput" placeholder="Enter number" />
+  <br /><br />
+  <button onclick="displayFactorial()">Factorial</button>
+  <button onclick="displayFibonacci()">Fibonacci</button>
+  <button onclick="displayPrimes()">Prime Numbers</button>
+  <button onclick="displayPalindrome()">Palindrome Check</button>
+</body>
+</html>

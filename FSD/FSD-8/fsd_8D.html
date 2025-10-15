@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Data Display</title>
+    <script>
+        function printObjectData() {
+            const obj = {
+                name: "Alice",
+                age: 30,
+                city: "New York"
+            };
+
+            // Using for-in loop
+            let result = "<h3>Using for-in Loop:</h3>";
+            for (let key in obj) {
+                result += key + ": " + obj[key] + "<br>";
+            }
+
+            // Using forEach on Object values
+            result += "<h3>Using forEach (Object.values):</h3>";
+            Object.values(obj).forEach(value => {
+                result += value + "<br>";
+            });
+
+            // Using for-of on Object entries
+            result += "<h3>Using for-of (Object.entries):</h3>";
+            for (let [key, value] of Object.entries(obj)) {
+                result += key + ": " + value + "<br>";
+            }
+
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <h2>Display Object Data</h2>
+    <button onclick="printObjectData()">Show Object Data</button>
+    <div id="output"></div>
+</body>
+</html>
